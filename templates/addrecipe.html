@@ -1,0 +1,49 @@
+{% extends 'base.html' %} {% block content %}
+<h3>Add Recipe</h3>
+<div class="row">
+    <form action="{{ url_for('insert_recipe') }}" method="POST"  class="col s12">
+        <div class="row">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">restaurant_menu</i>
+                    <select id="category" name="meal_type">
+                  <option value="" disabled selected>Choose Meal Type</option>
+                  {% for meal in meal_types %}
+                      <option value="{{meal.meal_type}}">{{meal.meal_type}}</option>
+                  {% endfor %}
+                </select>
+                    <label>Meal Type</label>
+                </div>
+            </div>
+            <div class="input-field col s12">
+                <i class="material-icons prefix">gesture</i>
+                <input id="name" name="name" type="text">
+                <label for="icon_prefix">Recipe Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">create</i>
+                <textarea name="description" id="description" class="materialize-textarea"></textarea>
+                <label for="icon_telephone">Recipe Link/Description</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="switch">
+                <label>
+                  <input id="is_vegan" name="is_vegan" type="checkbox">
+                  <span class="lever"></span>
+                   Vegan
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <button class="btn waves-effect waves-light #4caf50 green" type="submit" name="action">Add Recipe!
+                <i class="material-icons right">done</i>
+             </button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

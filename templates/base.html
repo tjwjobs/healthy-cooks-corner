@@ -2,26 +2,32 @@
 <html>
 
 <head>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/1989b55fb7.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
+    <link rel="stylesheet" href="/static/style.css" type="text/css" />
 </head>
 
 <body>
     <header>
         <nav>
-            <div class="nav-wrapper">
-                <a href="{{url_for('get_tasks')}}" class="brand-logo">Task Manager</a>
+            <div class="nav-wrapper #4caf50 green">
+                <a href="{{url_for('get_recipes')}}" class="brand-logo">Healthy Cook's Club</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="{{url_for('get_tasks')}}">Home</a></li>
-                    <li><a href="{{url_for('add_task')}}">New Task</a></li>
-                    <li><a href="{{url_for('get_categories')}}">Manage Categories</a></li>
+                    <li><a href="{{url_for('get_recipes')}}">Home</a></li>
+                    <li><a href="{{url_for('add_recipe')}}">New Recipe</a></li>
+                    <li><a href="{{url_for('get_mealtype')}}">Search</a></li>
+                    <li><a href="{{url_for('construction')}}">Log In</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
-                    <li><a href="{{url_for('get_tasks')}}">Home</a></li>
-                    <li><a href="{{url_for('add_task')}}">New Task</a></li>
-                    <li><a href="{{url_for('get_categories')}}">Manage Categories</a></li>
+                    <li><a href="{{url_for('get_recipes')}}">Home</a></li>
+                    <li><a href="{{url_for('add_recipe')}}">New Recipe</a></li>
+                    <li><a href="{{url_for('get_mealtype')}}">Search</a></li>
+                    <li><a href="{{url_for('construction')}}">Log In</a></li>
                 </ul>
             </div>
         </nav>
@@ -38,14 +44,6 @@
             $(".button-collapse").sideNav();
         });
 
-        $('.datepicker').pickadate({
-            selectMonths: true, // Creates a dropdown to control month
-            selectYears: 15, // Creates a dropdown of 15 years to control year,
-            today: 'Today',
-            clear: 'Clear',
-            close: 'Ok',
-            closeOnSelect: false // Close upon selecting a date,
-        });
     </script>
 </body>
 

@@ -1,3 +1,5 @@
+font-family: 'Lobster', cursive;
+
 .btn_small {
     height: 24px;
     width: 60px;
@@ -9,3 +11,25 @@
 .task_header {
     margin-top: 5px;
 }
+
+.meal-type {
+    color: rgb(0, 100, 250);
+    font-style: bold;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    display: block;
+    cursor: pointer;
+    width: 50px;
+    background: #ccc;
+}
+
+.rating label: before {
+    content: '\f005';
+    font-family: fontAwesome;
+}
+
