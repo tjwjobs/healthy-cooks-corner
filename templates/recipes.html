@@ -6,14 +6,10 @@
             <div class="collapsible-header">
                 <div class="col s3">
                     <!-- rating/comment code-->
-                    <div class="rating">
+                    
                     <h5>Rating</h5>
-                    <input type="radio" name="star" id="star1"><label for="star1"></label>
-                    <input type="radio" name="star" id="star2"><label for="star2"></label>
-                    <input type="radio" name="star" id="star3"><label for="star3"></label>
-                    <input type="radio" name="star" id="star4"><label for="star4"></label>
-                    <input type="radio" name="star" id="star5"><label for="star5"></label>
-                    </div>
+                    <input type="number" name="rate" id="rate" min="1" max="5" required placeholder="rate 1-5"><label for="rate"></label>
+                    
                     <!--<a href="{{url_for('construction', recipe_id=recipe._id)}}" 
                      class="waves-effect waves-light btn btn_small #4caf50 green">rate!</a>-->
 

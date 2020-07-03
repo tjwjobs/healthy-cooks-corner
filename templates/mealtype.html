@@ -4,30 +4,13 @@
 
 
 	<h5>Search recipes by meal type</h5>
-	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for recipes...">
+	
 	<ul id="myUL">
-		<li><a href="#">Breakfast</a></li>
-		<li><a href="#">Lunch</a></li>
-        <li><a href="#">Dinner</a></li>
+		<li><a href="/filter_recipes/Breakfast">Breakfast</a></li>
+		<li><a href="/filter_recipes/Lunch">Lunch</a></li>
+        <li><a href="/filter_recipes/Dinner">Dinner</a></li>
     </ul>
 
 </div>
-<script>
-function myFunction() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
-</script>
+
 {% endblock %}

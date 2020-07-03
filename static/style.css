@@ -17,19 +17,31 @@ font-family: 'Lobster', cursive;
     font-style: bold;
 }
 
-.rating input {
+/*.rating input {
     display: none;
 }
 
 .rating label {
     display: block;
     cursor: pointer;
-    width: 50px;
+    width: 10px;
     background: #ccc;
 }
 
-.rating label: before {
+.rating label:before {
     content: '\f005';
     font-family: fontAwesome;
+    position: relative;
+    display: block;
+    color: #101010;
 }
 
+.rating label:after {
+    content: '\f005';
+    font-family: fontAwesome;
+    position: absolute;
+    display: block;
+    color: #1f9cff;
+    top: 0;
+    opacity: 0;
+}

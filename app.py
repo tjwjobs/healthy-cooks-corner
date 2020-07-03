@@ -16,6 +16,11 @@ def get_recipes():
     return render_template("recipes.html",
                            recipes=mongo.db.recipes.find())
 
+@app.route('/filter_recipes/<meal_type>')
+def filter_recipes(meal_type):
+    return render_template("recipes.html",
+                           recipes=mongo.db.recipes.find({'meal_type': meal_type}))
+
 
 @app.route('/add_recipe')
 def add_recipe():
